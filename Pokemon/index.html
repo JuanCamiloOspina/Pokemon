@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mis PokÉmon</title>
+
+    <style>
+        body {
+
+            font-family: Arial;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+
+        .container {
+            background-color: #ff3939;
+            width: 350px;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        img {
+            width: 200px;
+            border: 4px solid #000000;
+            border-radius: 60%;
+
+        }
+
+
+        h1 {
+            color: rgb(0, 0, 0);
+            font-family: cursive;
+
+        }
+
+
+        p {
+            color: rgb(0, 0, 0);
+            font-family: cursive;
+
+        }
+
+
+        .inputagrupacion {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 60%;
+            font-family: cursive;
+            border-radius: 5px;
+            border: 1px solid #000000;
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            font-family: cursive;
+            border: none;
+            background-color: #000000;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .vacio {
+            margin-top: 20px;
+            padding: 40px;
+            border: 2px dashed #000000;
+            background-color: white;
+        }
+
+
+        #listaPokemon {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        #listaPokemon li {
+            background: white;
+            width: 80%;
+            max-width: 300px;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #listaPokemon li:hover {
+            color: red;
+            background: rgb(201, 199, 199);
+        }
+
+        .marcado {
+            background-color: rgb(201, 199, 199) !important;
+            text-decoration: line-through;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <img src="https://www.freeiconspng.com/uploads/pokemon-png-14.png">
+
+        <h1>Nuevo Pokémon</h1>
+        <p id="contadorTexto">Añade tu nuevo pokemon</p>
+
+        <div class="inputagrupacion">
+            <input type="text" id="nombrePokemon" placeholder="Escribe el nombre de tu pokemon">
+            <button>Agregar</button>
+        </div>
+
+        <ul id="listaPokemon" class="vacio">
+            <li id="contadorPokemon">Aún no hay criaturas nuevas</li>
+        </ul>
+        <p id="contadorMarcados">Pokémon marcados: 0</p>
+    </div>
+
+</body>
+
+</html>
+<script src="app.js"></script>
